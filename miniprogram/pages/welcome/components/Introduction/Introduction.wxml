@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="swatch">
+    <view class="item" wx:for="[1,2,3,4,5,6]" wx:key="index">
+      <image class="image" src="{{ pets[index] }}" mode="aspectFit" />
+    </view>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+<view class="container">
+  <view class="bar background"></view>
+  <view class="bar active gradient-bg" style="{{ activeBarStyle }}"></view>
+</view>

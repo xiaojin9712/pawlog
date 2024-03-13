@@ -1,0 +1,6 @@
+<view class="container">
+  <view class="item {{  activeCategoryId === item.id ? 'active' : '' }}" wx:for="{{ categories }}" wx:key="id" data-id="{{ item.id }}" bindtap="updateActiveCategoryId">
+    <image class="image" mode="aspectFit" src="{{  activeCategoryId === item.id ? item.src : item.staticSrc }}"></image>
+    <text class="text">{{ item.name }}</text>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+/* pages/welcome/components/ProgressBar/ProgressBar.wxss */
+@import "../../../../styles/variables.less";
+
+.container {
+  width: 100%;
+  position: relative;
+}
+
+.bar {
+  height: 4px;
+  border-radius: 4px;
+}
+
+.background {
+  background-color: #EBEBF5;
+}
+
+.active {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transition: all .2s ease-out;
+}

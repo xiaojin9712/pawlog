@@ -1,0 +1,19 @@
+<!-- pages/welcome/welcome.wxml -->
+<view class="container">
+  <view class="header">
+    <view class="title h1">PawLog</view>
+    <view class="desc h3">告诉我们一些关于TA的简单信息吧</view>
+    <view class="indicator h3">{{ currentStep + 1 }} / {{ fullStep }}</view>
+    <progress-bar percent="{{ ((currentStep + 1) / fullStep) * 100 }}" />
+  </view>
+  <view class="content">
+    <view class="content-title h2" wx:if="{{ currentStep !== 0 }}">TA是：</view>
+    <view class="content-wrapper">
+      <introduction wx:if="{{ currentStep === 0 }}" />
+      <category-select wx:if="{{ currentStep === 1 }}" categories="{{ categories }}" activeCategoryId="{{  activeCategoryId }}" bind:update-categoryid="updateActiveCategoryId" />
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="operation-button gradient-bg h3" bindtap="nextStep">下一步</view>
+  </view>
+</view>
