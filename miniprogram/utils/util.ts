@@ -28,10 +28,7 @@ export function preloadImages(imagePaths: string | string[]) {
   imagePaths.forEach((path) => {
     wx.getImageInfo({
       src: path,
-      success(res) {
-        console.log("Preloaded image width:", res.width);
-        console.log("Preloaded image height:", res.height);
-      },
+      success(res) {},
       fail(err) {
         console.error("Failed to preload image:", err);
       },

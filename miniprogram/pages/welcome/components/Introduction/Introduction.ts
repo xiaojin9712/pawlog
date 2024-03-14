@@ -29,7 +29,10 @@ Component({
    * 组件的初始数据
    */
   data: {
-    pets: categories.map((item) => item.staticSrc).slice(0, 6),
+    pets: categories
+      .map((item) => item.staticSrc)
+      .slice(0, 6)
+      .reverse(),
     currentSloganIndex: 0,
     introductionConfig: introductionConfig,
     timer: 0,
@@ -49,7 +52,6 @@ Component({
   lifetimes: {
     attached() {
       const timer = setInterval(() => {
-        console.log("timer", this.data.currentSloganIndex);
         this.updateSlogan();
       }, 5000);
       this.setData({

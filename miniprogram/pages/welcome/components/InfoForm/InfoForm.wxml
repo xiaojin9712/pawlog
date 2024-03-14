@@ -1,14 +1,14 @@
 <!--pages/welcome/components/InfoForm/InfoForm.wxml-->
 <view class="container">
   <view class="header">
-    <image class="image" src="https://7061-pawlog-6gfw9v2a5fcbe657-1252740566.tcb.qcloud.la/assets/emoji/animated/Cat%20Face.png?sign=56c246577c7a3080fc845cbe0922ac9c&t=1710331524" mode="aspectFit" />
+    <image class="image" src="{{ avatar }}" mode="aspectFit" />
   </view>
 
   <view class="form">
     <view class="item">
       <view class="label">TA叫做</view>
       <view class="wrapper">
-        <input class="input name-input" value="{{ name }}" bindinput="setName" placeholder-style="color:#9f9f9f" placeholder="输入我的爱称" />
+        <input auto-focus class="input name-input" value="{{ name }}" bindinput="setName" placeholder-style="color:#9f9f9f" placeholder="我喜欢叫TA..." />
       </view>
     </view>
     <view class="item">

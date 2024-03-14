@@ -77,11 +77,34 @@ Page({
     categories: categories, // pet's categories
     activeCategoryId: 1,
     bottomButtonTextArray: ["开启PawLog", "下一步", "完成"],
+    petAvatar: categories[0].src,
+    petInfo: {
+      gender: 1,
+      name: "",
+      meetDate: "2024-01-01",
+    },
   },
 
   updateActiveCategoryId(e: WechatMiniprogram.TouchEvent) {
     this.setData({
       activeCategoryId: e.detail.categoryId,
+    });
+    this.updatePetAvatar();
+  },
+
+  updatePetAvatar() {
+    const { categories, activeCategoryId } = this.data;
+    this.setData({
+      petAvatar: categories.find((item) => item.id === activeCategoryId)?.src,
+    });
+  },
+
+  updatePetInfo(e: WechatMiniprogram.TouchEvent) {
+    this.setData({
+      petInfo: {
+        ...this.data.petInfo,
+        ...e.detail,
+      },
     });
   },
 
@@ -89,6 +112,10 @@ Page({
     this.setData({
       currentStep: (this.data.currentStep + 1) % 3,
     });
+    if (this.data.currentStep == 0) {
+      const { petInfo, activeCategoryId } = this.data;
+      console.log("submit", petInfo, activeCategoryId);
+    }
   },
 
   /**

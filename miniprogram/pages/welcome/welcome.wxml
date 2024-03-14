@@ -8,11 +8,13 @@
   </view>
   <view class="content">
     <view class="content-title h2" wx:if="{{ currentStep === 1 }}">TA是：</view>
-    <view class="content-wrapper">
-      <introduction wx:if="{{ currentStep === 0 }}" />
-      <category-select wx:if="{{ currentStep === 1 }}" categories="{{ categories }}" activeCategoryId="{{  activeCategoryId }}" bind:update-categoryid="updateActiveCategoryId" />
-      <info-form wx:if="{{ currentStep === 2 }}" />
+    <div class="introduction-wrapper" wx:if="{{ currentStep === 0 }}">
+      <introduction />
+    </div>
+    <view class="content-wrapper" wx:if="{{ currentStep === 1 }}">
+      <category-select categories="{{ categories }}" activeCategoryId="{{  activeCategoryId }}" bind:update-categoryid="updateActiveCategoryId" />
     </view>
+    <info-form wx:if="{{ currentStep === 2 }}" avatar="{{ petAvatar }}" bind:info-update="updatePetInfo" />
   </view>
   <view class="bottom">
     <view class="operation-button gradient-bg h3" bindtap="nextStep">{{ bottomButtonTextArray[currentStep] }}</view>
