@@ -76,6 +76,7 @@ Page({
     fullStep: 3, // all step
     categories: categories, // pet's categories
     activeCategoryId: 1,
+    bottomButtonTextArray: ["开启PawLog", "下一步", "完成"],
   },
 
   updateActiveCategoryId(e: WechatMiniprogram.TouchEvent) {

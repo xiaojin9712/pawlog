@@ -1,3 +1,5 @@
+@import "../../../../styles/variables.less";
+
 @red: #f73f52;
 @orange: #ff9000;
 @yellow: #fbd400;
@@ -13,6 +15,48 @@
   align-items: center;
   max-width: 100%;
   padding-top: 48px;
+  flex-direction: column;
+}
+
+.slogan {
+  margin-top: 280px;
+  padding: 0 16px;
+}
+
+.title {
+  word-break: break-all;
+  animation: text_animation 5s infinite;
+}
+
+.desc {
+  margin-top: 12px;
+  color: #747474;
+  animation: text_animation 5s infinite;
+}
+
+@keyframes text_animation {
+  0% {
+    transform: translateX(40px);
+    animation-timing-function: ease-out;
+    opacity: 0;
+  }
+
+  14.28% {
+    transform: translateX(0);
+    animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  85.71% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
 }
 
 .swatch {

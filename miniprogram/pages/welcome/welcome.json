@@ -2,7 +2,8 @@
   "usingComponents": {
     "progress-bar": "./components/ProgressBar/ProgressBar",
     "category-select": "./components/CategorySelect/CategorySelect",
-    "introduction": "./components/Introduction/Introduction"
+    "introduction": "./components/Introduction/Introduction",
+    "info-form": "./components/InfoForm/InfoForm"
   },
   "disableScroll": true
 }

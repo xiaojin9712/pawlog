@@ -4,7 +4,7 @@
 .container {
   color: @base-color;
   background-color: @base-background-color;
-  padding: 24px 16px;
+  padding: 24px 0px;
   min-height: 100vh;
   max-height: 100vh;
   padding-top: 84px;
@@ -14,7 +14,9 @@
 }
 
 .header {
+  box-sizing: border-box;
   width: 100%;
+  padding: 0 16px;
 }
 
 .desc {
@@ -34,6 +36,8 @@
 
 .content-title {
   margin-bottom: 18px;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
 .content-wrapper {

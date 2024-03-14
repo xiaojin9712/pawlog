@@ -4,4 +4,9 @@
       <image class="image" src="{{ pets[index] }}" mode="aspectFit" />
     </view>
   </view>
+
+  <view class="slogan">
+    <view class="h1 title">{{ introductionConfig[currentSloganIndex].title }}</view>
+    <view class="h2 desc">{{ introductionConfig[currentSloganIndex].subtitle }}</view>
+  </view>
 </view>

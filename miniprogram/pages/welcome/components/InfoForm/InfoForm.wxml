@@ -1,2 +1,43 @@
 <!--pages/welcome/components/InfoForm/InfoForm.wxml-->
-<text>pages/welcome/components/InfoForm/InfoForm.wxml</text>
+<view class="container">
+  <view class="header">
+    <image class="image" src="https://7061-pawlog-6gfw9v2a5fcbe657-1252740566.tcb.qcloud.la/assets/emoji/animated/Cat%20Face.png?sign=56c246577c7a3080fc845cbe0922ac9c&t=1710331524" mode="aspectFit" />
+  </view>
+
+  <view class="form">
+    <view class="item">
+      <view class="label">TA叫做</view>
+      <view class="wrapper">
+        <input class="input name-input" value="{{ name }}" bindinput="setName" placeholder-style="color:#9f9f9f" placeholder="输入我的爱称" />
+      </view>
+    </view>
+    <view class="item">
+      <view class="label">TA是</view>
+      <view class="wrapper">
+        <view class="gender">
+          <view class="radio {{ gender === 1 ? 'checked' : '' }} male" data-value="1" bindtap="setGender">
+            <image class="gender-image" src="https://7061-pawlog-6gfw9v2a5fcbe657-1252740566.tcb.qcloud.la/assets/emoji/static/male_sign_3d.png?sign=e40fc55788537f2cb26e2a82ea0efc70&t=1710415077" mode="aspectFit" />
+            <view class="text">GG</view>
+          </view>
+          <view class="radio {{ gender === 2 ? 'checked' : '' }} female" data-value="2" bindtap="setGender">
+            <image class="gender-image" src="https://7061-pawlog-6gfw9v2a5fcbe657-1252740566.tcb.qcloud.la/assets/emoji/static/female_sign_3d.png?sign=39add83c20395f164df4d009af9b2dc0&t=1710415041" mode="aspectFit" />
+            <view class="text">MM</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="label">相见于</view>
+      <view class="wrapper">
+        <picker mode="date" value="{{ meetDate }}" start="2023-09-09" end="2024-03-15" fields="day" bindchange="setMeetDate">
+          <view class="calendar">
+            <view class="date">{{ meetDate }}</view>
+            <view class="icon-wrapper">
+              <view class="edit-icon"></view>
+            </view>
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+</view>
